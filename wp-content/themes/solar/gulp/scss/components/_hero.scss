@@ -1,0 +1,29 @@
+.hero {
+  align-items: center;
+  color: $secondary;
+  display: flex;
+  justify-content: center;
+
+  .row {
+    align-items: center;
+  }
+
+  &__puv {
+    h1 {
+      color: $primary;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__image {
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}

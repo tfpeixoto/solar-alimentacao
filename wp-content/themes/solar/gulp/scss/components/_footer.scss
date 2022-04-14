@@ -1,0 +1,23 @@
+.footer {
+  align-items: center;
+  border-top: 2px solid $secondary;
+  padding: 1rem;
+
+  ul {
+    display: inline-flex;
+
+    li {
+      a {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__menu{
+    ul{
+      li{
+        display: inline-flex;
+      }
+    }
+  }
+}

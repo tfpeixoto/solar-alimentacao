@@ -1,0 +1,11 @@
+.cta {
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__phrase {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}

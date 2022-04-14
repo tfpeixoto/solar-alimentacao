@@ -1,0 +1,25 @@
+.map {
+  &__box {
+    background: $primary;
+    color: white;
+    padding: 2rem;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-inline-start: none;
+
+    li {
+      display: inline-flex;
+      justify-content: space-around;
+
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.services {
+  text-align: center;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: $primary;
+  }
+
+  &__box {
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

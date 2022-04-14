@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  padding: w;
+
+  ul{
+    list-style: none;
+    display: inline-flex;
+  }
+
+  &__contact{
+    a{
+      color: $secondary;
+      font-weight: 700;
+    }
+  }
+
+  &__menu {
+    a {
+      color: $primary;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
