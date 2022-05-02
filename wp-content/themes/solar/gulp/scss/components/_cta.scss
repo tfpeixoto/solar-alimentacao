@@ -1,11 +1,22 @@
 .cta {
+  padding: 5rem 0;
+
   .row {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__phrase {
     font-size: 1.5rem;
     font-weight: 700;
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  &__button{
+    display: flex;
+    justify-content: center;
   }
 }

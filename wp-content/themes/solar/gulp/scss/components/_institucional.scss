@@ -1,5 +1,14 @@
 .institucional {
+  padding: 2.5rem 0;
+
   .row {
     align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    height: auto;
+    max-width: 100%;
   }
 }

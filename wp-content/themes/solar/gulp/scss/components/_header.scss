@@ -1,20 +1,46 @@
 .header {
-  display: flex;
-  padding: w;
-
-  ul{
-    list-style: none;
-    display: inline-flex;
+  .custom-logo-link {
+    margin-left: 2rem;
   }
 
-  &__contact{
-    a{
-      color: $secondary;
-      font-weight: 700;
+  ul {
+    display: inline-flex;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      margin: 0 auto;
+
+      li {
+        padding: 0 1.5rem;
+
+        a {
+          color: $secondary;
+          font-weight: 700;
+        }
+      }
     }
   }
 
+  &__icon {
+    fill: $secondary;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
   &__menu {
+    display: flex;
+    justify-content: center;
+
     a {
       color: $primary;
       font-size: 1rem;

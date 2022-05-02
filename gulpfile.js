@@ -42,7 +42,7 @@ gulp.task('purgecss', ['sass'], function () {
   return gulp.src(`${dir.src}/css/*.css`)
     .pipe(purgecss({
       content: [`${dir.build}/**/*.php`],
-      whitelist: [],
+      whitelist: ['custom-logo-link'],
       safelist: [],
       whitelistPatterns: []
     }))
@@ -59,24 +59,21 @@ gulp.task('imagemin', function () {
         { cleanupIDs: false }
       ]
     }))
-    .pipe(gulp.dest(`${dir.build}/images`))
+    .pipe(gulp.dest(`${dir.build}/images/`))
 });
 
 // JS
 gulp.task('js', function () {
   return gulp.src([
-    `${dir.src}/js/components/jquery-3.5.1.min.js`,
-    `${dir.src}/js/components/popper-1.16.1.min.js`,
-    `${dir.src}/js/components/bootstrap-4.5.0.min.js`,
-    `${dir.src}/js/components/jquery.mask-1.14.16.min.js`,
-    `${dir.src}/js/components/jquery.validate-1.19.2.min.js`,
-    `${dir.src}/js/rd-acoes.js`
+    // `${dir.node}/bootstrap/js/dist/base-component.js`,
+    `${dir.node}/bootstrap/js/dist/modal.js`,
+    `${dir.src}/js/actions.js`
   ])
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(`${dir.src}/js`))
+    .pipe(gulp.dest(`${dir.build}/js/`))
     .pipe(rename('scripts.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(`${dir.build}/js`))
+    .pipe(gulp.dest(`${dir.build}/js/`))
 });
 
 // WATCH

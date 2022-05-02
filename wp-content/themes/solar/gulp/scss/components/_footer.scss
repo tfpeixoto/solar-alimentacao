@@ -13,11 +13,51 @@
     }
   }
 
-  &__menu{
-    ul{
-      li{
+  &__menu {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: inline;
+      margin-bottom: 0;
+
+      li {
         display: inline-flex;
+        padding: 0 0.5rem;
       }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      margin-bottom: 0;
+
+      li {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $primary;
+    height: 1.5rem;
+    transition: all ease-in-out 0.25s;
+    width: 1.5rem;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__copy{
+    margin-bottom: 0;
+
+    a{
+      color: $primary;
+      font-weight: 800;
     }
   }
 }

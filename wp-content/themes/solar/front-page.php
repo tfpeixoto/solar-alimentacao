@@ -17,13 +17,13 @@ require_once("header.php");
       $home = new WP_Query($args);
 
       if ($home->have_posts()) : while ($home->have_posts()) : $home->the_post(); ?>
-          <div class="col col-md-4 hero__puv">
+          <div class="col col-md-5 hero__puv">
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>
             <a href="#" class="btn">Solicite um orçamento</a>
           </div>
 
-          <div class="col col-8 hero__image">
+          <div class="col col-md-7 hero__image">
             <?php the_post_thumbnail(); ?>
           </div>
 
@@ -36,8 +36,8 @@ require_once("header.php");
 <section class="services">
   <div class="container">
     <div class="row">
-      <div class="col col-md-12 services__title">
-        <h2>Serviços</h2>
+      <div class="col col-md-12">
+        <h2 class="services__title">Serviços</h2>
       </div>
     </div>
 
@@ -51,8 +51,8 @@ require_once("header.php");
 
       if ($services->have_posts()) : while ($services->have_posts()) : $services->the_post(); ?>
 
-          <div class="col col-md-3 services__box">
-            <?php the_post_thumbnail(); ?>
+          <div class="col col-md-4 services__box">
+            <?php the_post_thumbnail('services__images', ['class' => 'services__images']); ?>
             <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
           </div>
@@ -66,12 +66,12 @@ require_once("header.php");
 <section class="clients">
   <div class="container">
     <div class="row">
-      <div class="col col-3">
+      <div class="col col-md-3 clients__title">
         <h2>Clientes</h2>
       </div>
 
-      <div class="col col-9">
-        <ul>
+      <div class="col col-md-9">
+        <ul class="clients__brands">
           <?php
           $args = array(
             'post_type' => 'clientes',
@@ -81,7 +81,7 @@ require_once("header.php");
 
           if ($clients->have_posts()) : while ($clients->have_posts()) : $clients->the_post(); ?>
 
-              <li><?php the_post_thumbnail(); ?></li>
+              <li class="clients__item"><?php the_post_thumbnail('clients__images', ['class' => 'clients__images']); ?></li>
 
           <?php endwhile;
           endif; ?>
@@ -102,8 +102,8 @@ require_once("header.php");
 
       if ($institucional->have_posts()) : while ($institucional->have_posts()) : $institucional->the_post(); ?>
 
-          <div class="col col-md-6 institucional__image">
-            <?php the_post_thumbnail(); ?>
+          <div class="col col-md-6">
+            <?php the_post_thumbnail('institucional__image', ['class' => 'institucional__image']); ?>
           </div>
 
           <div class="col col-md-5 institucional__text">
@@ -143,11 +143,11 @@ require_once("header.php");
 <section class="cta">
   <div class="container">
     <div class="row">
-      <div class="col col-7 cta__phrase">
+      <div class="col col-md-8 cta__phrase">
         <p>Solicite um orçamento sem compromisso agora mesmo, responderemos o mais breve possível.</p>
       </div>
 
-      <div class="col col-4">
+      <div class="col col-md-4 cta__button">
         <a href="#" class="btn">Solicite um orçamento</a>
       </div>
     </div>
@@ -155,5 +155,6 @@ require_once("header.php");
 </section>
 
 <?php
+get_template_part("template-parts/modal");
 require_once("footer.php");
 ?>
