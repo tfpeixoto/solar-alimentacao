@@ -42,8 +42,10 @@ gulp.task('purgecss', ['sass'], function () {
   return gulp.src(`${dir.src}/css/*.css`)
     .pipe(purgecss({
       content: [`${dir.build}/**/*.php`],
-      whitelist: ['custom-logo-link'],
-      safelist: [],
+      whitelist: ['custom-logo-link', 'collapsing'],
+      safelist: {
+        greedy: [/^modal/],
+      },
       whitelistPatterns: []
     }))
     .pipe(gulp.dest(`${dir.build}/css`))

@@ -1,5 +1,10 @@
 .cta {
   padding: 5rem 0;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
 
   .row {
     align-items: center;
@@ -10,12 +15,14 @@
     font-size: 1.5rem;
     font-weight: 700;
 
-    p{
-      margin-bottom: 0;
+    p {
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
     }
   }
 
-  &__button{
+  &__button {
     display: flex;
     justify-content: center;
   }

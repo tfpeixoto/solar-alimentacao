@@ -2,6 +2,11 @@
   align-items: center;
   border-top: 2px solid $secondary;
   padding: 1rem;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
 
   ul {
     display: inline-flex;
@@ -31,6 +36,11 @@
   &__social {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
 
     ul {
       margin-bottom: 0;
@@ -52,12 +62,30 @@
     }
   }
 
-  &__copy{
+  &__copy {
     margin-bottom: 0;
 
-    a{
+    a {
       color: $primary;
       font-weight: 800;
     }
+  }
+}
+
+.back-top{
+  background: $primary;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  bottom: 15px;
+  color: white;
+  right: 15px;
+  position: fixed;
+  padding: 15px;
+
+  &__icon{
+    fill: white;
+    height: 1rem;
+    transform: rotate(-90deg);
+    width: 1rem;
   }
 }

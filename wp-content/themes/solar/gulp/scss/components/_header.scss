@@ -1,6 +1,8 @@
 .header {
   .custom-logo-link {
-    margin-left: 2rem;
+    @include media-breakpoint-up(md) {
+      margin-right: 2rem;
+    }
   }
 
   ul {
@@ -13,15 +15,31 @@
     justify-content: space-between;
   }
 
+  &__menu-icon {
+    fill: $secondary;
+    height: 2rem;
+    width: 2rem;
+  }
+
   &__contact {
     display: flex;
     justify-content: center;
 
     ul {
       margin: 0 auto;
+      text-align: center;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        text-align: left;
+      }
 
       li {
-        padding: 0 1.5rem;
+        padding: 0 0.5rem;
+
+        @include media-breakpoint-up(md) {
+          padding: 0 1.5rem;
+        }
 
         a {
           color: $secondary;
@@ -47,6 +65,29 @@
       font-weight: 700;
       text-decoration: none;
       text-transform: uppercase;
+      transition: all ease-in-out 0.25s;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    &.btn {
+      a {
+        svg {
+          fill: white;
+          height: 1rem;
+          margin: 0 0 5px 5px;
+          width: 1rem;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    a {
+      background: $primary;
+      color: $white;
     }
   }
 }

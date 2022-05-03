@@ -3,6 +3,11 @@
   color: $secondary;
   display: flex;
   justify-content: center;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
 
   .row {
     align-items: center;
@@ -18,12 +23,24 @@
     p {
       margin-bottom: 2rem;
     }
+
+    a {
+      svg {
+        fill: white;
+        height: 1rem;
+        margin: 0 0 5px 5px;
+        width: 1rem;
+      }
+    }
   }
 
   &__image {
-    img {
-      height: auto;
-      max-width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-top: 2rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
     }
   }
 }

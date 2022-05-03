@@ -2,15 +2,30 @@
   background: #f2f2f2;
   margin: 2.5rem 0;
   padding: 2.5rem 0;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
 
   &__title {
     align-items: center;
     display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
   }
 
   &__brands {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
   }
 
   &__item {
