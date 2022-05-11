@@ -28,11 +28,22 @@
       color: white;
       margin-right: 1rem;
       text-decoration: underline;
+      transition: all ease-in-out .25s;
+
+      &:hover{
+        color: $secondary;
+        text-decoration: none;
+
+        svg {
+          fill: $secondary;
+        }
+      }
 
       svg {
         fill: white;
         height: 1.5rem;
         margin-right: 0.25rem;
+        transition: all ease-in-out .25s;
         width: 1.5rem;
       }
     }
