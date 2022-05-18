@@ -11,10 +11,10 @@
 
           <div class="col-12 col-lg-8 modalcta__content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            
+
             <div class="modalcta__form">
               <p>Solicite um orçamento. <strong>Em até 48 horas entraremos em contato</strong>.</p>
-              
+
               <?= do_shortcode('[contact-form-7 id="44" title="Formulário de contato"]'); ?>
             </div>
           </div>
@@ -22,3 +22,4 @@
       </div>
     </div>
   </div>
+</div>
