@@ -31,7 +31,6 @@ function solar_registra_menu()
   register_nav_menus(array(
     'main-menu' => __('Menu Principal', 'solar'),
     'footer-menu' => __('Menu Footer', 'solar'),
-    'footer-menu' => __('Menu Footer', 'solar'),
   ));
 }
 add_action('after_setup_theme', 'solar_registra_menu');

@@ -46,7 +46,7 @@ gulp.task('purgecss', ['sass'], function () {
       safelist: {
         greedy: [/^modal/],
       },
-      whitelistPatterns: []
+      whitelistPatterns: [/^modal/]
     }))
     .pipe(gulp.dest(`${dir.build}/css`))
 });
@@ -68,7 +68,7 @@ gulp.task('imagemin', function () {
 gulp.task('js', function () {
   return gulp.src([
     // `${dir.node}/bootstrap/js/dist/base-component.js`,
-    `${dir.node}/bootstrap/js/dist/modal.js`,
+    // `${dir.node}/bootstrap/js/dist/modal.js`,
     `${dir.src}/js/actions.js`
   ])
     .pipe(concat('scripts.js'))

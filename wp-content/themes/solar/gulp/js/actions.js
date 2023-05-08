@@ -1,6 +1,8 @@
-var myModal = document.getElementById('modal')
-var myInput = document.getElementById('myInput')
+var ctaMenu = document.querySelector('.header__cta')
+var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+  keyboard: false
+})
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
+ctaMenu.addEventListener('click', () => {
+  myModal.show()
 })

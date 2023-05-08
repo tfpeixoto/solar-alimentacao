@@ -15,6 +15,12 @@
     justify-content: space-between;
   }
 
+  .navbar-nav {
+    @include media-breakpoint-up(md) {
+      align-items: center;
+    }
+  }
+
   &__menu-icon {
     fill: $secondary;
     height: 2rem;
@@ -22,8 +28,12 @@
   }
 
   &__contact {
-    display: flex;
-    justify-content: center;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: center;
+    }
 
     ul {
       margin: 0 auto;
@@ -58,6 +68,13 @@
   &__menu {
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
 
     a {
       color: $primary;
@@ -67,7 +84,8 @@
       text-transform: uppercase;
       transition: all ease-in-out 0.25s;
 
-      &:hover {
+      &:hover,
+      &:active {
         color: $secondary;
       }
     }
@@ -84,10 +102,22 @@
     }
   }
 
+  /*! purgecss start ignore */
   &__cta {
+    margin-left: 0;
+    margin-top: .5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+
     a {
       background: $primary;
+      border-radius: 5px;
       color: $white;
+      padding: 1rem 2rem !important;
     }
   }
+  /* purgecss end ignore */
 }
