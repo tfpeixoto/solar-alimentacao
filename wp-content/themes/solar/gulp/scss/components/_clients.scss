@@ -21,10 +21,13 @@
   &__brands {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     @include media-breakpoint-up(md) {
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
     }
   }
 

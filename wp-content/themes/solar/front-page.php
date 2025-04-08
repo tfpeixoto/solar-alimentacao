@@ -86,7 +86,7 @@ require_once("header.php");
 
           if ($clients->have_posts()) : while ($clients->have_posts()) : $clients->the_post(); ?>
 
-              <li class="clients__item"><?php the_post_thumbnail('clients__images', ['class' => 'clients__images']); ?></li>
+              <li class="clients__item"><?php the_post_thumbnail('thumbnail', ['class' => 'clients__images img-fluid']); ?></li>
 
           <?php endwhile;
           endif; ?>
@@ -123,15 +123,15 @@ require_once("header.php");
 </section>
 
 <section class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.9346500784322!2d-43.9133072!3d-19.9271585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699854f5e3e51%3A0x515467e10a77697c!2sRua%20Maestro%20Del%C3%AA%20Andrade%2C%20942%20-%20Santa%20Efig%C3%AAnia%2C%20Belo%20Horizonte%20-%20MG%2C%2030240-590!5e0!3m2!1spt-BR!2sbr!4v1652225530901!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.204873792874!2d-43.90361362401501!3d-19.915769637867115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69bd3d9ec0339%3A0xe9bcf28a55f2c633!2sRua%20Padre%20Feij%C3%B3%2C%20245%20-%20Saudade%2C%20Belo%20Horizonte%20-%20MG%2C%2030285-350!5e0!3m2!1spt-BR!2sbr!4v1718666230651!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   <div class="container">
     <div class="row">
       <div class="col col-md-5 map__box">
         <h3>Visite nossa cozinha</h3>
-        <p>Rua Maestro Delê Andrade, 942- Santa Efigênia<br />
-          Belo Horizonte/MG, CEP 30240-590<br />
-          <a href="https://www.google.com/maps/place/Rua+Maestro+Del%C3%AA+Andrade,+942+-+Santa+Efig%C3%AAnia,+Belo+Horizonte+-+MG,+30240-590/@-19.9271585,-43.9133072,17z/data=!3m1!4b1!4m5!3m4!1s0xa699854f5e3e51:0x515467e10a77697c!8m2!3d-19.9271585!4d-43.9133072" target="_blank">Ver mapa</a>
+        <p>Rua Padre Feijó, 245 - Saudade<br />
+          Belo Horizonte/MG, CEP 30285-350<br />
+          <a href="https://www.google.com/maps/place/Rua+Padre+Feij%C3%B3,+245+-+Saudade,+Belo+Horizonte+-+MG,+30285-350/@-19.9157696,-43.9036136,17z/data=!3m1!4b1!4m6!3m5!1s0xa69bd3d9ec0339:0xe9bcf28a55f2c633!8m2!3d-19.9157747!4d-43.9010387!16s%2Fg%2F11k3f8k2s2?entry=ttu" target="_blank">Ver mapa</a>
         </p>
 
         <h3>Horário de funcionamento</h3>

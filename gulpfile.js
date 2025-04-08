@@ -25,7 +25,7 @@ gulp.task('browser-sync', function () {
   ];
 
   browserSync.init(files, {
-    proxy: "http://localhost/solar/",
+    proxy: "http://solar-alimentacao.local/",
     notify: true,
   });
 });

@@ -6,6 +6,7 @@ function solar_adiciona_recursos_tema()
   add_theme_support('title-tag');
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
+  add_image_size('clients-images', 200, 200, true);
 }
 add_action('after_setup_theme', 'solar_adiciona_recursos_tema');
 
@@ -19,10 +20,11 @@ add_action('wp_enqueue_scripts', 'solar_scripts');
 
 
 // BOOTSTRAP NAVWALKER
-function register_navwalker(){
-	require_once get_template_directory() . '/class-wp-bootrap-navwalker.php';
+function register_navwalker()
+{
+  require_once get_template_directory() . '/class-wp-bootrap-navwalker.php';
 }
-add_action( 'after_setup_theme', 'register_navwalker' );
+add_action('after_setup_theme', 'register_navwalker');
 
 
 // REGISTRA MENU
