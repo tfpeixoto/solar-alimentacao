@@ -21,7 +21,7 @@
 wp-config.php
 
 # Example themes
-/wp-content/themes/twenty*/
+/wp-content/themes/
 
 # Uploads
 /wp-content/uploads/
@@ -33,7 +33,8 @@ wp-config.php
 /.htaccess
 
 # All plugins
-#
+/wp-content/plugins/
+
 # Note: If you wish to whitelist plugins,
 # uncomment the next line
 /wp-content/plugins/*
